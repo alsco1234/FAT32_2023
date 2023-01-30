@@ -21,16 +21,10 @@ BootRecord::BootRecord(char* buffer){
 
         
         int sector_count_in_reserved = io::to_le2(buffer + 0x0e); //예약된 영역의 섹터 수 10ae
-
         // reserved 영역의 끝지점 = fat1의 시작주소
         int reserved_area = sector_count_in_reserved * bytes_per_sector; //215c00
-        cout << hex << reserved_area << endl;
-
         // fat 섹터의 시작지점s
         int fat1_area = io::to_le2(buffer + 0x24); //FAT 영역의 섹터 수 7a9
-
         // data 영역의 시작지점
         int data_block_area = reserved_area + (fat_count * fat1_area * bytes_per_sector); //400000
-        
-        cout << hex << data_block_area << endl;
 }
