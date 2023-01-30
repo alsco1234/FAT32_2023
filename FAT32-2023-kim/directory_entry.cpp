@@ -31,11 +31,5 @@ class DirectoryEntry{
             int cluster_hi = io::to_le2(buffer + 0x14);
             int cluster_low = io::to_le2(buffer + 0x1A);
             int file_size = io::to_le4(buffer + 0x1C);
-            
-            cout << name << endl;
-            cout << ext << endl;
-            cout << hex << cluster_hi << endl;
-            cout << hex << cluster_low << endl;
-            cout << hex << file_size << endl;
         }
 };
