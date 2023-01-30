@@ -1,8 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include "utils.h"
-#include "boot_record.h"
 
 using namespace std;
 
