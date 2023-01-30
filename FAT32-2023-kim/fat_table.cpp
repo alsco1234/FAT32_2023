@@ -7,8 +7,6 @@
 using namespace std;
 
 class Fat_table{
-    private:
-
     public :
         vector<uint32_t> fat; //cluster area
 
